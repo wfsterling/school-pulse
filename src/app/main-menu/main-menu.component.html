@@ -2,28 +2,33 @@
   <div class="main-menu-wrapper">
     <ul class="footer-menu">
       <li>
-        <button mat-icon-button>
+        <button mat-icon-button routerLinkActive="active" routerLink="help">
           <mat-icon>feedback</mat-icon>
         </button>
-        <mat-label>Help</mat-label>
+        <mat-label>
+            <a routerLinkActive="active" routerLink="help">Help</a></mat-label>
       </li>
       <li>
-        <button mat-icon-button>
+        <button mat-icon-button routerLinkActive="active" routerLink="tip">
           <mat-icon>remove_red_eye</mat-icon>
         </button>
-        <mat-label>Report Tip</mat-label>
+        <mat-label>
+          <a routerLinkActive="active" routerLink="tip">Report Tip</a>
+        </mat-label>
       </li>
       <li>
-        <button mat-icon-button>
+        <button mat-icon-button routerLinkActive="active" routerLink="home">
           <mat-icon>home</mat-icon>
         </button>
-        <mat-label>Home</mat-label>
+        <mat-label>
+            <a routerLinkActive="active" routerLink="home">Home</a></mat-label>
       </li>
       <li>
-        <button mat-icon-button>
+        <button mat-icon-button routerLinkActive="active" routerLink="account">
           <mat-icon>perm_identity</mat-icon>
         </button>
-        <mat-label>My Account</mat-label>
+        <mat-label>
+            <a routerLinkActive="active" routerLink="account">My Account</a></mat-label>
       </li>
     </ul>
     
