@@ -31,6 +31,10 @@
         line-height: 1em;
         width: 100%;
         color: $primary;
+
+        a{
+            text-decoration: none;
+        }
     }
     li {
         width: 25%;
