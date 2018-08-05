@@ -1,0 +1,30 @@
+@import 'color';
+@import 'mixins';
+@import 'typography';
+
+.ai-bubble {
+    padding: 2em 3em 0 2em;
+    position: relative;
+    @include create-heading($body-typography, body-1);
+}
+.ai-message-wrapper {
+    @include mdc-cell(11,11,9,8,4);
+    text-align: left;
+    padding: .6em;
+    border: 2px solid #59FF51;
+    border-radius: 1.8em;
+    p{
+        line-height: 1.4em;
+        padding: .8em;
+        margin: 0;
+    }
+}
+
+.quote-direction {
+    width: 26px;
+    height: 16px;
+    background: url('src/assets/images/message-direction.svg') 0 0 no-repeat; 
+    position: absolute;
+    bottom: -13px;
+    left: 4em;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="16px" viewBox="0 0 26 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>message-direction</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="message-direction" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M2,1 L21,1 C18.9852568,4.25 16.3135222,6.95833333 12.9847961,9.125 C9.65607002,11.2916667 5.99447132,12.9166667 2,14 C2.66574522,10.75 2.99861783,8.04166667 2.99861783,5.875 C2.99861783,3.70833333 2.66574522,2.08333333 2,1 Z" id="Path-3" fill="#0012A5"></path>
+        <path d="M21,2 C18.9852568,5.25 16.3135222,7.95833333 12.9847961,10.125 C9.65607002,12.2916667 5.99447132,13.9166667 2,15 C4.66666667,8.33333333 4.66666667,4 2,2" id="Path-3" stroke="#59FF51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+</svg>

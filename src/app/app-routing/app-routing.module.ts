@@ -7,6 +7,22 @@ const routes: Routes = [
       path: '',
       component: CheckinComponent,
   },
+  {
+      path: 'help',
+      component: CheckinComponent,
+  },
+  {
+    path: 'tip',
+    component: CheckinComponent,
+  },
+  {
+    path: 'home',
+    component: CheckinComponent,
+  },
+  {
+      path: 'account',
+      component: CheckinComponent,
+  },
 ];
 
 @NgModule({
