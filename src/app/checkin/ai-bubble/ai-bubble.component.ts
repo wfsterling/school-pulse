@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ai-bubble.component.scss']
 })
 export class AiBubbleComponent implements OnInit {
-
+  bubbleMessage= 'Hey Xana Roo Poopa Choo, how are you feeling today?'
   constructor() { }
 
   ngOnInit() {
