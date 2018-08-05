@@ -1,0 +1,45 @@
+@import 'color';
+@import 'mixins';
+@import 'typography';
+
+#main-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: $surface;
+}
+.main-menu-wrapper {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer-menu {
+    list-style: none;
+    @include create-heading($body-typography, body-1);
+    padding: 0 0 .2em;
+    margin: 0;
+
+    mat-icon {
+        width: 100%;
+        font-size: 1.6em;
+        color: $primary;
+    }
+    mat-label {
+        font-size: .8em;
+        line-height: 1em;
+        width: 100%;
+        color: $primary;
+    }
+    li {
+        width: 25%;
+        display: inline-block;
+        
+        mat-label {
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
+    }
+}

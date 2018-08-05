@@ -1,0 +1,44 @@
+// Primary
+//
+// Accent
+button.mat-raised-button.mat-accent,
+button.mat-flat-button.mat-accent,
+button.mat-fab.mat-accent,
+button.mat-mini-fab.mat-accent {
+    background-color: $warning;
+    color: $light-primary-text;
+    font-weight: 400;
+}
+// Base
+button.mat-raised-button.mat-base,
+button.mat-flat-button.mat-base,
+button.mat-fab.mat-base,
+button.mat-mini-fab.mat-base {
+    background-color: $surface-90;
+    color: $light-primary-text;
+    font-weight: 400;
+}
+
+
+// Stroked
+button.mat-stroked-button {
+    border: 2px solid currentColor;
+    &.mat-accent {
+        border-color: $warning;
+        color: $warning;
+    }
+    &.mat-base {
+        border-color: $surface-90;
+        color: $surface-90;
+    }
+}
+
+// Icon
+button.mat-icon-button {
+    &.mat-accent {
+        color: $warning;
+    }
+    &.mat-base {
+        color: $surface-90;
+    }
+}

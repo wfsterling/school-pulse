@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlertBarComponent implements OnInit {
 
-  constructor() { }
+  title = 'Grant Beacon Middle School';
 
+  constructor() {
+    console.log ('alertBarComponent');
+  }
   ngOnInit() {
   }
 

@@ -1,8 +1,31 @@
-<mat-menu #appMenu="matMenu">
-  <button mat-menu-item>Settings</button>
-  <button mat-menu-item>Help</button>
-</mat-menu>
-
-<button mat-icon-button [matMenuTriggerFor]="appMenu">
-  <mat-icon>more_vert</mat-icon>
-</button>
+<nav id="main-menu">
+  <div class="main-menu-wrapper">
+    <ul class="footer-menu">
+      <li>
+        <button mat-icon-button>
+          <mat-icon>feedback</mat-icon>
+        </button>
+        <mat-label>Help</mat-label>
+      </li>
+      <li>
+        <button mat-icon-button>
+          <mat-icon>remove_red_eye</mat-icon>
+        </button>
+        <mat-label>Report Tip</mat-label>
+      </li>
+      <li>
+        <button mat-icon-button>
+          <mat-icon>home</mat-icon>
+        </button>
+        <mat-label>Home</mat-label>
+      </li>
+      <li>
+        <button mat-icon-button>
+          <mat-icon>perm_identity</mat-icon>
+        </button>
+        <mat-label>My Account</mat-label>
+      </li>
+    </ul>
+    
+  </div>
+</nav>

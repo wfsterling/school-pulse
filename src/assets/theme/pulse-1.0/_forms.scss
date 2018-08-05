@@ -1,0 +1,138 @@
+// Inputs
+//
+// Inputs should grow to fill the parent container.
+// The parent container governs the width.
+.mat-form-field {
+    width: 100%;
+
+    input {
+        padding-left: 0.5em;
+    }
+}
+.mat-form-field .mat-form-field-flex {
+    padding-top: 0;
+    border: thin solid $surface-90;
+    background-color: white;
+  }
+.mat-form-field-appearance-standard .mat-form-field-flex {
+    padding-top: 0!important;
+    padding-left: .5em;
+}
+// Radio Buttons
+// To create a column of radio buttons, add the .radio-column class
+.mat-radio-group.radio-column {
+    display: inline-flex;
+    flex-direction: column;
+}
+.mat-radio-button {
+    margin: 5px;
+    .mat-radio-outer-circle{
+        border-width: 1px;
+    }
+}
+.checkbox-column {
+    display: inline-flex;
+    flex-direction: column;
+}
+.mat-checkbox {
+    margin: 5px;
+}
+
+.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label, 
+.mat-form-field-empty.mat-form-field-label {
+    padding-left: .5em;
+}
+.mat-dp input {
+    padding-left: .5em;
+}
+.mat-form-field-flex {
+    background-color: white;
+}
+mat-divider.mat-divider {
+    margin-bottom: 1em;
+}
+mat-radio-group {
+    h6 {
+        width: 100%;
+    }
+    .mat-hint {
+        display: inline-block;
+        padding-left: 2em;
+    }
+}
+
+mat-form-field.mat-form-field textarea {
+    min-height: 6em;
+  }
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    background-color: white;
+}
+.mat-focused .mat-select-placeholder {
+    font-weight: 400;
+}
+.mat-select-placeholder,
+.mat-form-field-appearance-legacy label.mat-form-field-label {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.42);
+}
+
+// DATE
+md-date-fieldset .mat-form-field {
+    width: 14em
+}
+
+
+// callouts
+@mixin callout($color){
+    background-color: white;
+    border: 1px solid $color; 
+    padding: 0;
+    color: $dark-primary-text;
+    position: relative;
+    
+
+    .callout-icon {
+        @include mdc-cell(2,2,2,1,1);
+        background-color: $color;
+        margin: 1em 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+            color: white;
+            font-size: 2em;
+            @include mdc-layout-grid-cell-align(middle);
+        }
+    }
+    .callout-content {
+        @include mdc-cell(10,10,8,7,3);
+        padding: 1.2em;
+        margin: 0 0 1.4em 0;
+    }
+    .close-btn {
+        position: absolute;
+        top: 0.2em;
+        right: .2em;
+    }
+}
+  
+.callout-primary {
+    @include callout($info);
+}
+
+.callout-secondary {
+    @include callout($accent);
+}
+
+.callout-warning {
+    @include callout($warning);
+}
+
+.callout-danger {
+    @include callout($danger);
+}
+.callout {
+    @include callout($info);
+}

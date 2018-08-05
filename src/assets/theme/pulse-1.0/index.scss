@@ -1,0 +1,41 @@
+// This is a Material Legacy Theme
+// Date: 07/11/2018
+// @author: william.sterling@pinnacol.com
+
+// In Angular Material, a color theme is created by composing multiple 
+// palettes. In particular, a theme consists of:
+
+// *     A primary palette: colors most widely used across all screens 
+//          and components.
+// *     An accent palette: colors used for the floating action button 
+//          and interactive elements.
+// *     A warn palette: colors used to convey error state.
+// *     A foreground palette: colors for text and icons.
+// *     A background palette: colors used for element backgrounds.
+
+// ** You can include a theme file directly into your 
+// application from @angular/material/prebuilt-themes
+
+// Commented the theming import out to test importing
+// inside colors. This file uses variables from the 
+// theming file to set init color vars: 
+// @import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+@import 'variables';
+@import 'mixins';
+@import 'grid';
+@import 'color';
+@import 'buttons';
+@import 'typography';
+@import 'forms';
+
+// Media queries
+$mat-xsmall: 'max-width: 599px';
+$mat-small: 'max-width: 959px';
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($pn-app-theme);
+

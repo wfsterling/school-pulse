@@ -1,3 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'normalize.css/normalize.css';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import 'mixins';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+.grid-inner {
+    @include mdc-inner();
+  }
+  .form-container {
+    @include mdc-cell(8,9,8,8,4);
+  }
+  .full-container {
+    @include mdc-cell(12,12,10,8,4);
+  }
+  .short-wrapper {
+    @include mdc-cell(3,3,4,3,2);
+  }
+  .medium-wrapper {
+    @include mdc-cell(6,6,5,4,4);
+  }
+  .large-wrapper {
+    @include mdc-cell(9,9,7,6,4);
+  }

@@ -26,6 +26,11 @@
               "node_modules/@material/layout-grid/dist/mdc.layout-grid.css",
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/theme/pulse-1.0"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

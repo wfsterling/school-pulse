@@ -1,0 +1,26 @@
+@import 'color';
+
+.mat-toolbar {
+    background-color: #0548D9;
+}
+.mat-toolbar-row, .mat-toolbar-single-row{
+    height:2em
+}
+mat-toolbar {
+    > div {
+        width: 100%;
+    }
+    padding: 0.2em 4em;
+    p {
+        text-align: center;
+        margin: 0;
+        color: white;
+    }
+    #notification-icon {
+        position: absolute;
+        right: 1em;
+        top: .2em;
+        width: 2em;
+        color: white;
+    }
+}

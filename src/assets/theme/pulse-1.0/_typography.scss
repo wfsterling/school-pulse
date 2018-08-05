@@ -1,0 +1,121 @@
+@import '~@angular/material/theming';
+
+// $font1: "'Usual', 'Helvetica', sans-serif'";
+// $typography: mat-font-family($font1);
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+
+// display-4, display-3, display-2 and display-1 - Large, one-off headers, usually at the top of the page (e.g. a hero header).
+// headline - Section heading corresponding to the <h1> tag.
+// title - Section heading corresponding to the <h2> tag.
+// subheading-2 - Section heading corresponding to the <h3> tag.
+// subheading-1 - Section heading corresponding to the <h4> tag.
+// ** REUSE Display for Screen:
+// display-2 - Section heading corresponding to <h5> tag.
+// display-1 - Section heading corresponding to <h6> tag.
+// body-1 - Base body text.
+// body-2 - Bolder body text.
+// caption - Smaller body and hint text.
+// button - Buttons and anchors.
+// input - Form input fields.
+// Represents a typography level from the Material design spec.
+
+
+$heading-typography: mat-typography-config(
+  $font-family:   'Roboto Slab, serif',
+  $display-4:     mat-typography-level(64px, 72px, 300),
+  $display-3:     mat-typography-level(56px, 64px, 300),
+  $display-2:     mat-typography-level(48px, 56px, 300),
+  $display-1:     mat-typography-level(24px, 28px, 400),
+
+  $headline:      mat-typography-level(44px, 55px, 700),
+  $title:         mat-typography-level(28px, 48px, 800),
+  $subheading-2:  mat-typography-level(24px, 30px, 800),
+  $subheading-1:  mat-typography-level(21px, 28px, 800),
+  $body-2:        mat-typography-level(16px, 24px, 700),
+  $body-1:        mat-typography-level(16px, 24px, 300),
+  $caption:       mat-typography-level(14px, 20px, 400),
+  $button:        mat-typography-level(15.74px, 20px, 400),
+  $input:         mat-typography-level(16px, 1.125, 300)
+);
+$body-typography: mat-typography-config(
+  $font-family:   'Lato, sans-serif',
+  $display-4:     mat-typography-level(64px, 72px, 300),
+  $display-3:     mat-typography-level(56px, 64px, 300),
+  $display-2:     mat-typography-level(18px, 24px, 700),
+  $display-1:     mat-typography-level(14px, 18px, 700),
+
+  $headline:      mat-typography-level(44px, 55px, 300),
+  $title:         mat-typography-level(36px, 48px, 300),
+  $subheading-2:  mat-typography-level(24px, 30px, 300),
+  $subheading-1:  mat-typography-level(21px, 28px, 300),
+  $body-2:        mat-typography-level(16px, 24px, 700),
+  $body-1:        mat-typography-level(16px, 24px, 400),
+  $caption:       mat-typography-level(14px, 20px, 400),
+  $button:        mat-typography-level(15.74px, 20px, 400),
+  $input:         mat-typography-level(16px, 1.125, 400)
+);
+
+@include mat-core($body-typography);
+// @include mat-base-typography($heading-typography);
+
+@mixin create-heading($config, $level) {
+  font-family: mat-font-family($config);
+  font-weight: mat-font-weight($config, $level);
+  font-size: mat-font-size($config, $level);
+  line-height: mat-line-height($config, $level);
+}
+.mat-display-4, .mat-typography .mat-display-4 {
+  @include create-heading($heading-typography, display-4);
+}
+.mat-display-3, .mat-typography .mat-display-3 {
+  @include create-heading($heading-typography, display-3);
+}
+.mat-display-2, .mat-typography .mat-display-2 {
+  @include create-heading($heading-typography, display-2);
+}
+.mat-display-1, .mat-typography .mat-display-1 {
+  @include create-heading($heading-typography, display-1);
+  background: $primary;
+  color: white;
+  padding: 0.5em;
+  margin-bottom: 0;
+}
+.mat-h1, .mat-typography h1 {
+  @include create-heading($heading-typography, headline);
+  color: $primary;
+}
+.mat-h2, .mat-typography h2 {
+  @include create-heading($heading-typography, title);
+  color: $primary;
+}
+.mat-h3, .mat-typography h3 {
+  @include create-heading($heading-typography, subheading-2);
+  color: $primary;
+}
+.mat-h4, .mat-typography h4 {
+  @include create-heading($heading-typography, subheading-1);
+}
+.mat-h5, .mat-typography h5 {
+  @include create-heading($body-typography, display-2);
+}
+.mat-h6, .mat-typography h6 {
+  @include create-heading($body-typography, display-1);
+}
+
+
+.mat-body p, .mat-body-1 p, .mat-typography p {
+  @include create-heading($body-typography, body-1);
+}
+.mat-body-2 p, .mat-typography .mat-body-2,
+.mat-typography label {
+  @include create-heading($body-typography, body-1);
+}
+.mat-typography caption {
+  @include create-heading($body-typography, caption);
+  display: block;
+  text-align: left;
+}
+.mat-toolbar h6 {
+  @include create-heading($heading-typography, body-2);
+}
