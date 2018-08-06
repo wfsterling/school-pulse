@@ -18,26 +18,55 @@ ul {
 }
 li {
     @include mdc-inner();
+    &.contact-list{
+        align-items: center;
+        margin-bottom: 1.2em;
+    }
+
     
-    > .avatar {
-        height: 42px;
-        width: 42px;
-        background: url('/assets/images/avatar-1.png') 0 0 no-repeat;
-        display: inline-block;
-        clip-path: circle(60px at center);
+    .avatar-wrapper {
+        @include mdc-cell(1,1,1,1,1);
+        text-align: center;
+        .avatar {
+            height: 42px;
+            width: 42px;
+            display: inline-block;
+            clip-path: circle(60px at center);
+            img {
+                height: 42px;
+                width: 42px;
+            }
+        }
+        
     }
     .contact-wrapper {
-        // display: inline-block;
-        @include mdc-cell(10,10,9,6,3);
+        @include mdc-cell(11,11,9,7,3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: mat-color($app-primary, 400);
+        border-radius: 3em;
+        color: $light-primary-text;
+        padding: 0.4em 0.4em 0.4em 2em;
+
         p {
             width: 85%;
-            display: inline-block;
-            vertical-align: middle
+            padding: 0;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-        i {
-            width: 15%;
-            display: inline-block;
-            vertical-align: middle
+        a > mat-icon {
+            width: 1em;
+            font-size: 1.8em;
+            padding: .2em;
+            text-align: center;
+            background-color: white;
+            border-radius: 1em;
+            color: mat-color($app-primary, 400);
+            line-height: 1em;
+            height: 1em;
         }
     }
 }

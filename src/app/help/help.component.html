@@ -4,16 +4,21 @@
       <h1>Help</h1>
       <!-- Family and Friends -->
       <ul>
-        <li class="contact">
-          <span class="avatar"></span>
-          <div class="contact-wrapper">
-            <p>Dad</p>
-            <i class="material-icons">call</i>
-          </div></li>
-        <li>Mom</li>
-        <li>Poppy</li>
+
+        <li *ngFor="let contact of contacts" class="contact-list">
+          <div class="avatar-wrapper"><span class="avatar"><img src="{{contact.avatar}}"></span></div>
+          <div class="full-container contact-wrapper">
+            <p>{{contact.name}}</p>
+            <button mat-icon-button>
+                <a href="tel:{{contact.phone}}"><mat-icon aria-label="Phone number for contact">call</mat-icon></a>
+            </button>
+          </div>
+        </li>
+          
       </ul>
+
       <mat-divider></mat-divider>
+
       <!-- Emergency/911/School -->
       <ul>
         <li>911</li>
