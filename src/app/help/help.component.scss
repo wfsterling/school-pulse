@@ -1,14 +1,43 @@
 @import 'color';
+@import 'mixins';
 
-h1 {
+.help-container {
     margin-top: 2em;
 }
+h1 {
+    margin-top: .5em;
+    padding-left: .5em;
+}
 
-li > span {
-    height: 42px;
-    width: 42px;
+ul {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 1em;
     
-    background: url('/assets/images/avatar-1.png') 0 0 no-repeat;
-    display: inline-block;
-    clip-path: circle(60px at center);
+}
+li {
+    @include mdc-inner();
+    
+    > .avatar {
+        height: 42px;
+        width: 42px;
+        background: url('/assets/images/avatar-1.png') 0 0 no-repeat;
+        display: inline-block;
+        clip-path: circle(60px at center);
+    }
+    .contact-wrapper {
+        // display: inline-block;
+        @include mdc-cell(10,10,9,6,3);
+        p {
+            width: 85%;
+            display: inline-block;
+            vertical-align: middle
+        }
+        i {
+            width: 15%;
+            display: inline-block;
+            vertical-align: middle
+        }
+    }
 }
