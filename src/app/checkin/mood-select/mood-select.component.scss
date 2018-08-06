@@ -1,0 +1,53 @@
+@import 'color';
+@import 'mixins';
+@import 'typography';
+
+.degrees-wrapper {
+    @include mdc-inner();
+    padding: 1em;
+}
+#degrees {
+    @include mdc-cell(3,3,3,3,3);
+    text-align: left;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;	
+    letter-spacing: 0.4px;	
+    line-height: 16px;
+    i{
+        font-size: .9em;
+    }
+}
+.mood-details {
+    @include mdc-inner();
+    margin-bottom: 2em;
+}
+#mood-title {
+    @include mdc-inner();
+    h2 {
+        @include create-heading($body-typography, title);	
+        @include mdc-cell(12,12,10,8,4);
+        color: $light-primary-text;
+    }
+    .mood-options {
+        @include mdc-cell(12,12,10,8,4);
+        span {
+            width: 2em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    p {
+        color: #05D999;	
+        @include create-heading($heading-typography, body-1);
+        display: inline-block;
+        text-decoration: underline;
+    }
+}
+button {
+    height: 44px;
+    border-radius: 2em;
+    padding: 0 3em;
+    text-transform: uppercase;
+    background-color: $accent;
+    color: $light-primary-text;
+}

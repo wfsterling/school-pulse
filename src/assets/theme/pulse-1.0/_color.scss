@@ -1,33 +1,18 @@
 @import '~@angular/material/theming';
 
 
-
-// Define additional color needs
-// Alerts
-$primary: #7DC6C3;
-$accent: #70AABF;
-$surface: #f0f0f0;
-$warning: #db8a06;
-$danger: #CC4B37;
-$info: #db8a06;
-$success: $primary;
-
-
-$mat-teal: (
-  50: #dff1f1,
-  100: #b0dcdb,
-  200: #7dc6c3,
-  300: #48afab,
-  400: #1a9f98,
-  500: #008e86,
-  600: #008179,
-  700: #007269,
-  800: #006259,
-  900: #00463d,
-  A100: #97fdf8,
-  A200: #40f7ee,
-  A400: #00dfd4,
-  A700: #00bab0,
+// Primary (blue)
+$mat-primary: (
+  50: #E7E9FB,
+  100: #C3C8F4,
+  200: #99A4ED,
+  300: #6C81E6,
+  400: #4664E0,
+  500: #0548D9,
+  600: #0040CE,
+  700: #0035C2,
+  800: #002AB7,
+  900: #0012A5,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -39,24 +24,20 @@ $mat-teal: (
     700: $light-primary-text,
     800: $light-primary-text,
     900: $light-primary-text,
-    A100: $dark-primary-text,
-    A200: $dark-primary-text,
-    A400: $dark-primary-text,
-    A700: $light-primary-text
   )
 );
-// Primary Blue
-$mat-blue: (
-  50: #e5f6fc,
-  100: #c0eaf7,
-  200: #9dddf0,
-  300: #83cee6,
-  400: #79c4dc,
-  500: #78bad2,
-  600: #70aabf,
-  700: #6695a5,
-  800: #5d818c,
-  900: #4f5d61,
+// Accent (Green)
+$mat-accent: (
+  50: #E0F9ED,
+  100: #B3EFD3,
+  200: #7AE4B7,
+  300: #05D999,
+  400: #00CF82,
+  500: #00C46C,
+  600: #00B461,
+  700: #00A153,
+  800: #008F47,
+  900: #006F31,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -67,35 +48,11 @@ $mat-blue: (
     600: $dark-primary-text,
     700: $light-primary-text,
     800: $light-primary-text,
-    900: $light-primary-text
+    900: $light-primary-text,
   )
 );
-// Secondary (accent) Brand;
-$mat-primary: (
-  50: #e2f5f6,
-  100: #b5e5ea,
-  200: #88d4dd,
-  300: #60c2d3,
-  400: #44b5ce,
-  500: #2aa9c9,
-  600: #209cbd,
-  700: #0f89ab,
-  800: #0e7899,
-  900: #005979,
-  contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $dark-primary-text,
-    400: $dark-primary-text,
-    500: $light-primary-text,
-    600: $light-primary-text,
-    700: $light-primary-text,
-    800: $light-primary-text,
-    900: $light-primary-text
-  )
-);
-$mat-grey: (
+
+$mat-surface: (
   100: #fafafa,
   400: #f0f0f0,
   900: #c0c0c0,
@@ -105,18 +62,7 @@ $mat-grey: (
     900: $dark-primary-text,
   )
 );
-$mat-orange: (
-  400: #DB8A06,
-  contrast: (
-    400: $light-primary-text
-  )
-);
-$mat-red: (
-  400: #CC4B37,
-  contrast: (
-    400: $light-primary-text
-  )
-);
+
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -129,57 +75,22 @@ $mat-red: (
 // * Whereas $app-primary is a color pallete, and 900 is the variant. 
 // * Without a variant assigned, the default is the default-variant.
 
+$app-primary:  mat-palette($mat-primary, 500, 100, 900); // Pinnacol (brand) Blue
+$app-accent:  mat-palette($mat-accent, 300, 100, 500); // Lt Blue
+$app-surface:  mat-palette($mat-surface, 400, 100, 900); // Lt gray
 
-$app-primary:  mat-palette($mat-primary, 900, 100, 800); // Pinnacol (brand) Blue
-$app-accent:  mat-palette($mat-blue, 600, 100, 900); // Lt Blue
-$app-surface:  mat-palette($mat-grey, 400, 100, 900); // Lt gray
-$app-alt:  mat-palette($mat-teal, 600, 100, 900); // Lt gray
-$app-warning:  mat-palette($mat-orange, 400); // Orange
-$app-danger:  mat-palette($mat-red, 400); // Red
-$app-info:  mat-palette($mat-blue, 400); // )Lt Blue 
-
-// Create the theme object (a Sass map containing all of the palettes).
+// // Create the theme object (a Sass map containing all of the palettes).
 $app-theme: mat-light-theme($app-primary, $app-accent);
 
-
 // App vars
-$primary : mat-color($app-primary, 900);
-$accent : mat-color($app-accent, 600);
-$alt : mat-color($app-alt, 400);
-$body-bg : mat-color($app-surface, 400);
+$primary : mat-color($app-primary, 500);
+$accent : mat-color($app-accent, 300);
 
-// SHADES
-// PRIMARY
-$primary-5 : mat-color($app-primary, 50);
-$primary-10 : mat-color($app-primary, 100);
-$primary-20 : mat-color($app-primary, 200);
-$primary-30 : mat-color($app-primary, 300);
-$primary-40 : mat-color($app-primary, 400);
-$primary-50 : mat-color($app-primary, 500);
-$primary-60 : mat-color($app-primary, 600);
-$primary-70 : mat-color($app-primary, 700);
-$primary-80 : mat-color($app-primary, 800);
-$primary-90 : mat-color($app-primary, 900);
 
-// SECONDARY
-$accent-5 : mat-color($app-accent, 50);
-$accent-10 : mat-color($app-accent, 100);
-$accent-20 : mat-color($app-accent, 200);
-$accent-30 : mat-color($app-accent, 300);
-$accent-40 : mat-color($app-accent, 400);
-$accent-50 : mat-color($app-accent, 500);
-$accent-60 : mat-color($app-accent, 600);
-$accent-70 : mat-color($app-accent, 700);
-$accent-80 : mat-color($app-accent, 800);
-$accent-90 : mat-color($app-accent, 900);
-
-// SURFACE
+// // SURFACE
 $surface-10 : mat-color($app-surface, 100);
 $surface-40 : mat-color($app-surface, 400);
 $surface-90 : mat-color($app-surface, 900);
 
-$warning : mat-color($app-warning, 400);
-$danger : mat-color($app-danger, 400);
-$info : mat-color($app-info, 400);
-$success : $alt;
+
 

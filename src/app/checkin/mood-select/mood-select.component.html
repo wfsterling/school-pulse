@@ -4,13 +4,28 @@
     <div id="mood-selector">
       O
     </div>
+  </div>
+</div>
 
+<div class="degrees-wrapper">
+  <div id="degrees">
+    {{angle}}&deg; {{degreeChange}}&deg;
+    <i class="material-icons">arrow_upward</i>
+  </div>
+</div>
+
+<div class="mood-details">
+  <div class="full-container">
     <div id="mood-title">
-      <h2>Pretty OK</h2>
-      <p>[Fine, Normal, Chill, Nothing new...]</p>
+      <h2>{{moodTitle}}</h2>
+      <div class="mood-options">
+        <span><i class="material-icons">arrow_left</i></span>
+        <p>{{moodOptions}}</p>
+        <span><i class="material-icons">arrow_right</i></span>
+      </div>
     </div>
 
-    <button mat-raised-button color="primary">
+    <button mat-raised-button color="accent">
       Yeah, that's it!
     </button>
 

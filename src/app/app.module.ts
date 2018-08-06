@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from 'src/assets/theme/material.module';
+import { MaterialModule } from '../assets/theme/pulse-1.0/material.module';
 import { AlertBarComponent } from './alert-bar/alert-bar.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { CheckinComponent } from './checkin/checkin.component';

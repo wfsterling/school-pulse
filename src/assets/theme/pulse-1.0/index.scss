@@ -19,16 +19,16 @@
 // Commented the theming import out to test importing
 // inside colors. This file uses variables from the 
 // theming file to set init color vars: 
-// @import '~@angular/material/theming';
+@import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
+@import 'color';
 @import 'variables';
 @import 'mixins';
 @import 'grid';
-@import 'color';
-@import 'buttons';
+// @import 'buttons';
 @import 'typography';
-@import 'forms';
+// @import 'forms';
 
 // Media queries
 $mat-xsmall: 'max-width: 599px';
@@ -37,5 +37,5 @@ $mat-small: 'max-width: 959px';
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($pn-app-theme);
+@include angular-material-theme($app-theme);
 

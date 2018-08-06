@@ -1,3 +1,14 @@
+@import 'color';
+
 h1 {
     margin-top: 2em;
+}
+
+li > span {
+    height: 42px;
+    width: 42px;
+    
+    background: url('/assets/images/avatar-1.png') 0 0 no-repeat;
+    display: inline-block;
+    clip-path: circle(60px at center);
 }
