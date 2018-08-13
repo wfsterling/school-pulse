@@ -14,6 +14,7 @@ import { MoodSelectComponent } from './checkin/mood-select/mood-select.component
 import { HelpComponent } from './help/help.component';
 import { TipComponent } from './tip/tip.component';
 import { AccountComponent } from './account/account.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,23 @@ import { AccountComponent } from './account/account.component';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // Specify ng-circle-progress as an import
+    NgCircleProgressModule.forRoot({
+      'radius': 60,
+      'space': -10,
+      'outerStrokeWidth': 10,
+      'outerStrokeColor': '#4882c2',
+      'innerStrokeColor': '#e7e8ea',
+      'innerStrokeWidth': 10,
+      'title': 'UI',
+      'animateTitle': false,
+      'animationDuration': 1000,
+      'showUnits': false,
+      'showBackground': false,
+      'clockwise': false,
+      'startFromZero': false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,33 +1,51 @@
-<div class="grid-inner">
+<div class="mood-select grid-inner">
   <div class="full-container">
 
-    <div id="mood-selector">
-      O
+    <div id="mood-select" class="grid-inner max-grid">
+      <div class="full-container">
+          
+
+        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <defs></defs>
+          <circle style="fill: rgb(0, 18, 165); stroke-linecap: round; stroke-miterlimit: 12; stroke: rgb(0, 0, 0); stroke-width: 5px;" cx="153.453" cy="104.126" r="93.499"></circle>
+          <path style="stroke: rgb(5, 219, 155); stroke-width: 10px; fill: rgba(216, 216, 216, 0); stroke-linecap: round;" d="M 153.159 11.082 C 225.153 11.09 270.138 89.031 234.134 151.375 C 218.419 178.589 190.085 196.09 158.715 197.96"></path>
+        </svg>
+
+          
+
+
+          <mat-slider></mat-slider>
+
+      </div>
+      
     </div>
-  </div>
-</div>
 
-<div class="degrees-wrapper">
-  <div id="degrees">
-    {{angle}}&deg; {{degreeChange}}&deg;
-    <i class="material-icons">arrow_upward</i>
-  </div>
-</div>
 
-<div class="mood-details">
-  <div class="full-container">
-    <div id="mood-title">
-      <h2>{{moodTitle}}</h2>
-      <div class="mood-options">
-        <span><i class="material-icons">arrow_left</i></span>
-        <p>{{moodOptions}}</p>
-        <span><i class="material-icons">arrow_right</i></span>
+    <div class="grid-inner max-grid degrees-wrapper">
+      <div id="degrees">
+        {{angle}}&deg; {{degreeChange}}&deg;
+        <i class="material-icons">arrow_upward</i>
+      </div>
+    </div>
+    
+    <div class="grid-inner max-grid mood-details">
+      <div class="full-container">
+        <div id="mood-title">
+          <h2>{{moodTitle}}</h2>
+          <div class="mood-options">
+            <span><i class="material-icons">arrow_left</i></span>
+            <p>{{moodOptions}}</p>
+            <span><i class="material-icons">arrow_right</i></span>
+          </div>
+        </div>
+    
+        <button mat-raised-button color="accent">
+          Yeah, that's it!
+        </button>
+    
       </div>
     </div>
 
-    <button mat-raised-button color="accent">
-      Yeah, that's it!
-    </button>
 
   </div>
 </div>

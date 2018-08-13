@@ -16,20 +16,26 @@ ul, li, div, span, p, {
   box-sizing: border-box;
 }
 .grid-inner {
-    @include mdc-inner();
+  @include mdc-inner();
+  
+  &.max-grid {
+    max-width: 480px;
+    margin: 0 auto;
   }
-  .form-container {
-    @include mdc-cell(8,9,8,8,4);
-  }
-  .full-container {
-    @include mdc-cell(12,12,10,8,4);
-  }
-  .short-wrapper {
-    @include mdc-cell(3,3,4,3,2);
-  }
-  .medium-wrapper {
-    @include mdc-cell(6,6,5,4,4);
-  }
-  .large-wrapper {
-    @include mdc-cell(9,9,7,6,4);
-  }
+}
+
+.form-container {
+  @include mdc-cell(8,9,8,8,4);
+}
+.full-container {
+  @include mdc-cell(12,12,10,8,4);
+}
+.short-wrapper {
+  @include mdc-cell(3,3,4,3,2);
+}
+.medium-wrapper {
+  @include mdc-cell(6,6,5,4,4);
+}
+.large-wrapper {
+  @include mdc-cell(9,9,7,6,4);
+}
