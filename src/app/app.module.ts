@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from 'src/assets/theme/material.module';
+import { MaterialModule } from '../assets/theme/pulse-1.0/material.module';
 import { AlertBarComponent } from './alert-bar/alert-bar.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { CheckinComponent } from './checkin/checkin.component';
@@ -14,6 +14,7 @@ import { MoodSelectComponent } from './checkin/mood-select/mood-select.component
 import { HelpComponent } from './help/help.component';
 import { TipComponent } from './tip/tip.component';
 import { AccountComponent } from './account/account.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,23 @@ import { AccountComponent } from './account/account.component';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // Specify ng-circle-progress as an import
+    NgCircleProgressModule.forRoot({
+      'radius': 60,
+      'space': -10,
+      'outerStrokeWidth': 10,
+      'outerStrokeColor': '#4882c2',
+      'innerStrokeColor': '#e7e8ea',
+      'innerStrokeWidth': 10,
+      'title': 'UI',
+      'animateTitle': false,
+      'animationDuration': 1000,
+      'showUnits': false,
+      'showBackground': false,
+      'clockwise': false,
+      'startFromZero': false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

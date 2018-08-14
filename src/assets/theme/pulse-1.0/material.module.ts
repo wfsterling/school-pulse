@@ -19,6 +19,7 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatSelectModule,
+  MatSliderModule,
   MatRadioModule,
   MatDatepickerModule,
   MatNativeDateModule
@@ -44,6 +45,7 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatSliderModule,
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule
@@ -67,6 +69,7 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatSliderModule,
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule

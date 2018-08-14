@@ -1,19 +1,32 @@
 @import 'color';
 @import 'typography';
 
+.header {
+    background-color: #0548D9;
+}
 .mat-toolbar {
     background-color: #0548D9;
+    .header-wrapper {
+        width: 100%;
+    }
 }
 .mat-toolbar-row, .mat-toolbar-single-row{
     height:2em
 }
 mat-toolbar.mat-toolbar {
     @include create-heading($body-typography, body-1);
+    padding: 0;
 
+    .header-wrapper {
+        position: relative;
+        p {
+            padding: 0.2em 3em;
+        }
+    }
     > div {
         width: 100%;
     }
-    padding: 0.2em 3em;
+    
     p {
         text-align: center;
         margin: 0;
@@ -24,7 +37,7 @@ mat-toolbar.mat-toolbar {
     #notification-icon {
         position: absolute;
         right: 0em;
-        top: .2em;
+        top: .04em;
         width: 2em;
         color: white;
     }

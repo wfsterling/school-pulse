@@ -11,19 +11,20 @@
     @include mdc-cell(11,11,9,8,4);
     text-align: left;
     padding: .6em;
-    border: 2px solid #59FF51;
+    border: 2px solid $accent;
     border-radius: 1.8em;
     p{
         line-height: 1.4em;
         padding: .8em;
         margin: 0;
+        color: $light-primary-text;
     }
 }
 
 .quote-direction {
     width: 26px;
     height: 16px;
-    background: url('src/assets/images/message-direction.svg') 0 0 no-repeat; 
+    background: url('/assets/images/message-direction.svg') 0 0 no-repeat; 
     position: absolute;
     bottom: -13px;
     left: 4em;

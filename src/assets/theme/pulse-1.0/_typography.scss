@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+@import 'color';
 
 // $font1: "'Usual', 'Helvetica', sans-serif'";
 // $typography: mat-font-family($font1);
@@ -19,6 +20,7 @@
 // button - Buttons and anchors.
 // input - Form input fields.
 // Represents a typography level from the Material design spec.
+
 
 
 $heading-typography: mat-typography-config(
