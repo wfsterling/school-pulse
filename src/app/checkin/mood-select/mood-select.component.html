@@ -5,16 +5,23 @@
       <div class="full-container">
           
 
-        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <!-- <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
           <defs></defs>
           <circle style="fill: rgb(0, 18, 165); stroke-linecap: round; stroke-miterlimit: 12; stroke: rgb(0, 0, 0); stroke-width: 5px;" cx="153.453" cy="104.126" r="93.499"></circle>
           <path style="stroke: rgb(5, 219, 155); stroke-width: 10px; fill: rgba(216, 216, 216, 0); stroke-linecap: round;" d="M 153.159 11.082 C 225.153 11.09 270.138 89.031 234.134 151.375 C 218.419 178.589 190.085 196.09 158.715 197.96"></path>
-        </svg>
+        </svg> -->
 
-          
+        <circle-progress
+        [percent]="85"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#78C000'"
+        [innerStrokeColor]="'#C7E596'"
+        [animation]="true"
+        [animationDuration]="300"></circle-progress>
 
-
-          <mat-slider></mat-slider>
+        <!-- <mat-slider></mat-slider> -->
 
       </div>
       
